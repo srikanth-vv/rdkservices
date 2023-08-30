@@ -148,8 +148,10 @@ namespace Plugin {
         if(_tts) {
             Exchange::ITextToSpeech::Configuration ttsConfig;
             _tts->GetConfiguration(ttsConfig);
-            response["ttsendpoint"]         = ttsConfig.ttsEndPoint;
-            response["ttsendpointsecured"]  = ttsConfig.ttsEndPointSecured;
+            // response["ttsendpoint"]         = ttsConfig.ttsEndPoint;
+            // response["ttsendpointsecured"]  = ttsConfig.ttsEndPointSecured;
+            response["ttsendpoint"]         = "Test1";
+            response["ttsendpointsecured"]  = "Test2";
             response["language"]            = ttsConfig.language;
             response["voice"]               = ttsConfig.voice;
             response["speechrate"]          = ttsConfig.speechRate;

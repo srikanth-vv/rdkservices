@@ -148,8 +148,10 @@ namespace Plugin {
         if(_tts) {
             Exchange::ITextToSpeech::Configuration ttsConfig;
             _tts->GetConfiguration(ttsConfig);
-            response["ttsendpoint"]         = ttsConfig.ttsEndPoint;
-            response["ttsendpointsecured"]  = ttsConfig.ttsEndPointSecured;
+            // response["ttsendpoint"]         = ttsConfig.ttsEndPoint;
+            // response["ttsendpointsecured"]  = ttsConfig.ttsEndPointSecured;
+            response["ttsendpoint"]         = "http://cdn-ec-ric-312.voice-guidance-tts.xcr.comcast.net/tts?";
+            response["ttsendpointsecured"]  = "https://sky-tts-run-api-gateway-3m02gblb.ew.gateway.dev/tts";
             response["language"]            = ttsConfig.language;
             response["voice"]               = ttsConfig.voice;
             response["speechrate"]          = ttsConfig.speechRate;
